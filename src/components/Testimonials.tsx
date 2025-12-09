@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
+import Image from 'next/image';
 
 const testimonials = [
     {
@@ -88,7 +89,7 @@ export default function Testimonials() {
                                     <div className="flex gap-13">
                                         <div className="w-[60%] bg-cover bg-center rounded-[30px] min-h-[300px]" style={{ backgroundImage: `url(${testimonial.imageLeft})` }}></div>
                                         <div className="w-[40%] flex flex-col gap-10">
-                                            <div className="bg-primary w-20 h-15"></div>
+                                            <Image src="icons/quote.svg" alt="Quote" width={80} height={60} />
                                             <div className="flex flex-col gap-6 text-white">
                                                 <div className="text-[36px] font-big-shoulders font-semibold gold-text uppercase">"{testimonial.quote}"</div>
                                                 <p>{testimonial.description}</p>
@@ -100,7 +101,7 @@ export default function Testimonials() {
                                                 </div>
                                                 <div className="flex gap-1">
                                                     {Array.from({ length: testimonial.rating }, (_, i) => (
-                                                        <div key={i} className="w-5 h-5 bg-[#FFBE15]"></div>
+                                                        <Image src="icons/star.svg" alt="Star" width={15} height={15} />
                                                     ))}
                                                 </div>
                                             </div>

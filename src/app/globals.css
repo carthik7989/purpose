@@ -33,9 +33,9 @@
     background: linear-gradient(180deg, #996516 0%, #FFCC00 25%, #D4AF37 50%, #B8860B 100%);
   }
 
-  .gold-gradient-40 {
-    background: linear-gradient(180deg, #996516 0%, #FFCC00 25%, #D4AF37 50%, #B8860B 100%);
-    opacity: 0.4;
+  .gold-gradient-dark {
+    background: linear-gradient(180deg, #665116 0%, #90791B 25%, #726023 50%, #69571D 100%);
+
   }
 
 

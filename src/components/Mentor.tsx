@@ -1,6 +1,15 @@
 import PrimaryButton from "./PrimaryButton";
+import CheckListItem from "./CheckListItem";
 
 export default function Mentor() {
+    const checkListItems = [
+        "Eye-opening",
+        "Transformative",
+        "Safe",
+        "Guided",
+        "Practical",
+        "Life-shifting",
+    ];
     return (
         <section className="flex flex-col fp max-container">
 
@@ -83,31 +92,9 @@ export default function Mentor() {
                 <div className="flex flex-col gap-10 col-span-4 col-start-5 row-span-1">
                     <div className="text-[46px] font-big-shoulders font-regular text-white">Together, they create a session that is:</div>
                     <div className="grid grid-flow-col grid-cols-[repeat(2,max-content)] grid-rows-3 gap-x-10 gap-y-5 text-white">
-
-                        <div className="flex gap-3 items-center">
-                            <div className="w-6 h-6 gold-gradient rounded-full"></div>
-                            <p>Eye-opening</p>
-                        </div>
-                        <div className="flex gap-3 items-center">
-                            <div className="w-6 h-6 gold-gradient rounded-full"></div>
-                            <p>Transformative</p>
-                        </div>
-                        <div className="flex gap-3 items-center">
-                            <div className="w-6 h-6 gold-gradient rounded-full"></div>
-                            <p>Safe</p>
-                        </div>
-                        <div className="flex gap-3 items-center">
-                            <div className="w-6 h-6 gold-gradient rounded-full"></div>
-                            <p>Guided</p>
-                        </div>
-                        <div className="flex gap-3 items-center">
-                            <div className="w-6 h-6 gold-gradient rounded-full"></div>
-                            <p>Practical</p>
-                        </div>
-                        <div className="flex gap-3 items-center">
-                            <div className="w-6 h-6 gold-gradient rounded-full"></div>
-                            <p> Life-shifting</p>
-                        </div>
+                        {checkListItems.map((item, index) => (
+                            <CheckListItem key={index}>{item}</CheckListItem>
+                        ))}
                     </div>
                 </div>
                 {/* End of Grid 2 */}

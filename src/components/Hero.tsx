@@ -1,7 +1,29 @@
 import PrimaryButton from './PrimaryButton';
+import Image from 'next/image';
 
 export default function Hero() {
-
+    const eventDetails = [
+        {
+            title: "Event Date",
+            value: "14th Dec 2025",
+            icon: "/icons/calendar.svg",
+        },
+        {
+            title: "Time",
+            value: "11:30 AM",
+            icon: "/icons/time.svg",
+        },
+        {
+            title: "Format",
+            value: "Live Zoom Session",
+            icon: "/icons/video.svg",
+        },
+        {
+            title: "Duration",
+            value: "60 - 70 Minutes",
+            icon: "/icons/duration.svg",
+        },
+    ];
 
     return (
         <section className="min-h-screen max-container flex gap-7 fp">
@@ -17,38 +39,16 @@ export default function Hero() {
 
                 {/* Second Row */}
                 <div className="grid grid-flow-row grid-cols-[repeat(2,max-content)] gap-x-9 gap-y-16 text-white">
-                    <div className="flex  flex-col gap-4">
-                        <div className="flex items-center gap-3 text-xs font-geist font-normal ">
-                            <div className="w-6 h-6 bg-white"></div>
-                            <div>Event Date</div>
-                        </div>
-                        <div className="text-2xl font-big-shoulders font-semibold">14th Dec 2025</div>
-                    </div>
 
-                    <div className="flex  flex-col gap-4">
-                        <div className="flex items-center gap-3 text-xs font-geist font-normal ">
-                            <div className="w-6 h-6 bg-white"></div>
-                            <div>Time</div>
+                    {eventDetails.map((detail, index) => (
+                        <div key={index} className="flex  flex-col gap-4">
+                            <div className="flex items-center gap-3 text-xs font-geist font-normal ">
+                                <Image src={detail.icon} alt="Calendar" width={26} height={26} />
+                                <div>{detail.title}</div>
+                            </div>
+                            <div className="text-2xl font-big-shoulders font-semibold">{detail.value}</div>
                         </div>
-                        <div className="text-2xl font-big-shoulders font-semibold">11:30 AM</div>
-                    </div>
-
-                    <div className="flex  flex-col gap-4">
-                        <div className="flex items-center gap-3 text-xs font-geist font-normal ">
-                            <div className="w-6 h-6 bg-white"></div>
-                            <div>Format</div>
-                        </div>
-                        <div className="text-2xl font-big-shoulders font-semibold">Live Zoom Session</div>
-                    </div>
-                    <div className="flex  flex-col gap-4">
-                        <div className="flex items-center gap-3 text-xs font-geist font-normal ">
-                            <div className="w-6 h-6 bg-white"></div>
-                            <div>Duration</div>
-                        </div>
-                        <div className="text-2xl font-big-shoulders font-semibold">60 - 70 Minutes</div>
-                    </div>
-
-
+                    ))}
                 </div>
 
                 {/* End of Second Row */}

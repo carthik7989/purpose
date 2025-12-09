@@ -13,6 +13,9 @@ import Faq from "@/components/Faq";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import StickyBar from "@/components/StickyBar";
+import Session from "@/components/Session";
+import Attend from "@/components/Attend";
+import Unique from "@/components/Unique";
 
 export default function Home() {
   return (
@@ -27,6 +30,9 @@ export default function Home() {
       <Struggle />
       <Promise />
       <Curriculum />
+      <Session />
+      <Attend />
+      <Unique />
       <Testimonials />
       <Faq />
       <CallToAction />
