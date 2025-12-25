@@ -53,12 +53,12 @@ export default function Testimonials() {
 
     const handlePaginationClick = (index: number) => {
         if (swiperInstance) {
-            swiperInstance.slideTo(index);
+            swiperInstance.slideToLoop(index);
         }
     };
 
     return (
-        <section className="relative w-full flex flex-col gap-10 md:gap-15 lg:gap-20 fp max-container">
+        <section className="relative w-full flex flex-col gap-10 md:gap-15 lg:gap-20 fp max-container overflow-hidden">
             <GlowEffect className="bottom-0 left-0 " />
             <GlowEffect className="bottom-0 right-0 " />
 
@@ -66,7 +66,7 @@ export default function Testimonials() {
                 {/* First Row */}
                 <div className="flex flex-col gap-2 md:gap-5">
                     <div className="text-lg gold-text">[ Students reviews ]</div>
-                    <h2 className="text-2xl md:text-4xl xl:text-[58px] font-big-shoulders font-semibold text-white uppercase ">What Our students Say</h2>
+                    <h2 className="text-2xl md:text-4xl xl:text-5xl 2xl:text-[58px] font-big-shoulders font-semibold text-white uppercase">What Our students Say</h2>
                 </div>
                 {/* End of First Row */}
 
@@ -86,15 +86,15 @@ export default function Testimonials() {
                 >
                     {testimonials.map((testimonial, index) => (
                         <SwiperSlide key={index}>
-                            <div className="flex flex-col md:flex-row gap-20">
+                            <div className="flex flex-col md:flex-row gap-20 xl:gap-10 2xl:gap-20">
                                 {/* Left Column */}
                                 <div className="w-full xl:w-[70%] flex flex-col gap-10  lg:gap-13">
-                                    <div className="flex flex-col md:flex-row gap-10 lg:gap-13">
+                                    <div className="flex flex-col md:flex-row gap-10 lg:gap-13 xl:gap-10 2xl:gap-13">
                                         <div className="w-full md:w-[50%] xl:w-[60%] bg-cover bg-center rounded-[30px] min-h-[300px]" style={{ backgroundImage: `url(${testimonial.imageLeft})` }}></div>
                                         <div className="w-full md:w-[50%] xl:w-[40%] flex flex-col gap-7 md:gap-10">
-                                            <Image className="w-[20%] mmd:w-[18%] sm:w-[12%] md:w-[18%] h-auto lg:w-[80px] lg:h-[60px]" src="icons/quote.svg" alt="Quote" width={80} height={60} />
+                                            <Image className="w-[20%] mmd:w-[18%] sm:w-[12%] md:w-[18%] lg:w-[15%] xl:w-[20%] h-auto 2xl:w-[80px] 2xl:h-[60px]" src="icons/quote.svg" alt="Quote" width={80} height={60} />
                                             <div className="flex flex-col gap-6 text-white">
-                                                <div className="text-2xl  lg:text-[36px] font-big-shoulders font-semibold gold-text uppercase">"{testimonial.quote}"</div>
+                                                <div className="text-2xl  lg:text-[36px] xl:text-3xl 2xl:text-[36px] font-big-shoulders font-semibold gold-text uppercase">"{testimonial.quote}"</div>
                                                 <p>{testimonial.description}</p>
                                             </div>
                                             <div className="flex flex-col gap-3 md:gap-5">
@@ -104,7 +104,7 @@ export default function Testimonials() {
                                                 </div>
                                                 <div className="flex gap-1">
                                                     {Array.from({ length: testimonial.rating }, (_, i) => (
-                                                        <Image src="icons/star.svg" alt="Star" width={15} height={15} />
+                                                        <Image key={i} src="icons/star.svg" alt="Star" width={15} height={15} />
                                                     ))}
                                                 </div>
                                             </div>

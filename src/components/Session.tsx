@@ -67,15 +67,15 @@ export default function Session() {
 
     ]
     return (
-        <section className="relative fpy max-container text-white font-big-shoulders">
-            <GlowEffect bgClass="bg-primary" className="top-1/2 left-0 -translate-y-1/2" />
-            <GlowEffect className="top-1/2 right-0 -translate-y-1/2" />
+        <section className="relative fpy max-container text-white font-big-shoulders overflow-hidden">
+            <GlowEffect bgClass="bg-primary" opacity="opacity-10 sm:opacity-40" className=" top-80 left-1/2 -translate-x-1/2 sm:top-40 md:top-60 lg:top-1/2 lg:left-0 lg:-translate-y-1/2 " />
+            <GlowEffect opacity="opacity-10 sm:opacity-40" className="top-200 right-1/2 translate-x-1/2 sm:top-130 md:top-150 lg:top-1/2 lg:right-0 lg:-translate-y-1/2" />
 
             {/* Desktop View */}
-            <div className="hidden sm:flex flex-col justify-between items-stretch gap-9">
-                <Image className="z-1 w-[718px] h-[414px] sm:w-full sm:h-auto fpr" src="images/before-session.svg" alt="Before Session" width={718} height={414} />
+            <div className="hidden sm:flex flex-col lg:flex-row justify-between items-stretch gap-9 lg:gap-0">
+                <Image className="z-1  sm:w-full sm:h-auto lg:w-[50%] xl:w-[45%] 2xl:w-[718px] 2xl:h-[414px] fpr xl:pr-0" src="images/before-session.svg" alt="Before Session" width={718} height={414} />
                 <div className="w-px bg-white shrink-0"></div>
-                <Image className="z-1 w-[720px] h-[414px] sm:w-full sm:h-auto fpl" src="images/after-session.svg" alt="After Session" width={720} height={414} />
+                <Image className="z-1  sm:w-full sm:h-auto lg:w-[50%] xl:w-[45%] 2xl:w-[720px] 2xl:h-[414px] fpl xl:pl-0" src="images/after-session.svg" alt="After Session" width={720} height={414} />
             </div>
             {/* End of Desktop view */}
 

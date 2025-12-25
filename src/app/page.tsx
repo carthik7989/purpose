@@ -11,15 +11,15 @@ import Struggle from "@/components/Struggle";
 import Promise from "@/components/Promise";
 import Faq from "@/components/Faq";
 import CallToAction from "@/components/CallToAction";
-import Footer from "@/components/Footer";
 import StickyBar from "@/components/StickyBar";
 import Session from "@/components/Session";
 import Attend from "@/components/Attend";
 import Unique from "@/components/Unique";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground selection:bg-gold selection:text-white pt-20 overflow-hidden">
+    <main className="min-h-screen bg-background text-foreground selection:bg-gold selection:text-white pt-12 md:pt-16 xl:pt-12 2xl:pt-20 ">
       <Navbar />
       <Hero />
       <Statistics />

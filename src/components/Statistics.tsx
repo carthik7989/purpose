@@ -66,8 +66,8 @@ export default function Statistics() {
     const people = useCounter(1000, isVisible);
 
     return (
-        <div className="flex flex-col items-center gap-10 bg-background-light fp font-big-shoulders max-container">
-            <h2 className="text-3xl md:text-[38px] lg:text-5xl xl:text-[54px] uppercase font-semibold text-text">Event Starts In</h2>
+        <section className="flex flex-col items-center gap-10 bg-background-light fp font-big-shoulders max-container overflow-hidden">
+            <h2 className="text-3xl md:text-[38px] lg:text-5xl 2xl:text-[54px] uppercase font-semibold text-text">Event Starts In</h2>
             <CountdownTimer variant="default" />
             <div ref={statsRef} className="flex gap-5 sm:gap-10 lg:gap-30 mt-0 md:mt-5">
                 <div className="flex gap-2 md:gap-5 items-center">
@@ -79,6 +79,6 @@ export default function Statistics() {
                     <div className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold">people guided</div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

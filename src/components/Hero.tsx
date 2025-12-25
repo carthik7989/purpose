@@ -28,7 +28,7 @@ export default function Hero() {
     ];
 
     return (
-        <section className="min-h-screen max-container flex flex-col lg:flex-row gap-7 fp">
+        <section className="min-h-screen max-container flex flex-col lg:flex-row gap-15 2xl:gap-7 fp overflow-hidden">
             {/* Hero Left */}
             <div className="relative w-full lg:w-[45%] flex flex-col gap-9">
                 {/* First Row */}
@@ -56,7 +56,7 @@ export default function Hero() {
                 {/* End of Second Row */}
 
                 <PrimaryButton>Register For Free</PrimaryButton>
-                <Image className='absolute -bottom-10 right-0' src="/icons/spark-multi.svg" alt="spark" width={150} height={155.46} />
+                <Image className='absolute -bottom-13 right-55 mmd:right-70 mlg:right-80 sm:-bottom-20 md:right-100 lg:right-15 lg:bottom-0 xl:right-0 2xl:-bottom-10  2xl:right-0 w-[15%] sm:w-[13%] lg:w-[15%] xl:w-[18%] 2xl:w-[150px] 2xl:h-[155.46px]' src="/icons/spark-multi.svg" alt="spark" width={150} height={155.46} />
                 <GlowEffect className="top-40 left-30" />
 
             </div>
@@ -71,7 +71,7 @@ export default function Hero() {
                     <div className="h-[300px] sm:h-[400px] md:h-[500px] lg:h-auto bg-blue-300 col-span-2 row-span-2 rounded-t-full"></div>
 
                 </div>
-                <Image className='absolute top-20 right-20 -rotate-60' src="/icons/hand-drawn.svg" alt="spark" width={44.17} height={51.38} />
+                <Image className='absolute -top-10 right-0 lg:top-15  2xl:top-20 2xl:right-20 -rotate-60 w-[12%] sm:w-[11%] md:w-[9%] 2xl:w-[44.17px] 2xl:h-[51.38px]' src="/icons/hand-drawn.svg" alt="Hand Drawn" width={44.17} height={51.38} />
             </div>
             {/* End of Hero Right */}
 

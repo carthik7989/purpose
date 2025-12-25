@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/30 border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/30 border-b border-white/10 overflow-hidden">
       <div className="max-container mx-auto fpx h-15 md:h-20 flex items-center justify-between font-big-shoulders font-semibold text-lg">
 
         <div className="xl:hidden text-xl md:text-2xl gold-text font-big-shoulders capitalize font-bold">The Purpose Project</div>

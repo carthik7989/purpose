@@ -14,12 +14,12 @@ export default function Mentor() {
         "Life-shifting",
     ];
     return (
-        <section className=" flex flex-col fp max-container gap-6 md:gap-0">
+        <section className=" flex flex-col fp max-container gap-6 md:gap-0 overflow-hidden">
 
             {/* First Row */}
             <div className="relative grid grid-cols-8 grid-rows-[repeat(9,auto)] gap-5 md:gap-8 text-white ">
-                <Image className='absolute bottom-6 left-0' src="/icons/swirl.svg" alt="spark" width={60.9} height={61.25} />
-                <Image className='absolute top-0 right-0' src="/icons/spark.svg" alt="spark" width={75.76} height={68.61} />
+                <Image className='absolute bottom-50 left-5 sm:bottom-50 sm:left-20 md:left-0 xl:bottom-0 2xl:bottom-6 2xl:left-0 w-[30%] sm:w-[18%] md:w-[13%] lg:w-[10%] xl:w-[7%] 2xl:w-[60.9px] 2xl:h-[61.25px]' src="/icons/swirl.svg" alt="Swirl" width={60.9} height={61.25} />
+                <Image className='absolute top-10 right-5 md:top-50 md:right-0 sm:top-15 sm:right-20 xl:-top-5 xl:right-0 2xl:top-0 2xl:right-0 w-[25%] sm:w-[18%] md:w-[13%] lg:w-[10%] xl:w-[6%] 2xl:w-[75.76px] 2xl:h-[68.61px]' src="/icons/spark.svg" alt="Spark" width={75.76} height={68.61} />
                 <GlowEffect className="top-0 left-30" />
                 <GlowEffect className="bottom-0 right-30" />
                 <GlowEffect bgClass="bg-[#4399E2]" className="top-0 right-0" />
@@ -34,7 +34,7 @@ export default function Mentor() {
 
                 {/* Grid 3 */}
                 <div className="flex flex-col gap-3 md:gap-5 col-span-8 col-start-1 row-start-4 md:col-span-5 md:row-span-2 md:col-start-4 md:row-start-1 xl:col-span-3 xl:row-span-2 xl:col-start-3 xl:row-start-3  self-start z-1">
-                    <div className="text-2xl text-[38px] lg:text-5xl font-big-shoulders font-normal uppercase">MEET YOUR MENTORS</div>
+                    <div className="text-2xl text-[38px] lg:text-5xl xl:text-4xl 2xl:text-5xl font-big-shoulders font-normal uppercase">MEET YOUR MENTORS</div>
                     <p>Learn from mentors who’ve transformed careers, identities, and confidence levels for over two decades.</p>
                 </div>
                 {/* End of Grid 3 */}
@@ -66,7 +66,7 @@ export default function Mentor() {
 
             <div className="grid grid-cols-8 grid-rows-[repeat(2,auto)] md:grid-rows-1 gap-8 ">
                 {/* Left Column */}
-                <div className="w-full lg:w-[90%] flex flex-col gap-6 md:pt-18 text-white col-span-8 md:col-span-4 md:row-span-1">
+                <div className="w-full 2xl:w-[90%] flex flex-col gap-6 md:pt-18 xl:pt-0 text-white col-span-8 md:col-span-4 md:row-span-1">
                     <div className="text-xl font-big-shoulders font-medium uppercase gold-text">About Tina:</div>
                     <p>Tina has spent more than two decades shaping the careers, confidence, and identities of individuals across IT, consulting, leadership, and talent development. Having coached over 1,000 students, freshers, working professionals, and career restarters, she brings a rare combination of structured clarity frameworks and deep emotional intelligence.</p>
                     <p>Her expertise is rooted in understanding human behavior — how people think, how they react to their environment, why they feel stuck, and how they can rebuild confidence through clarity and identity-definition.</p>
@@ -90,7 +90,7 @@ export default function Mentor() {
                 {/* Grid 1 */}
                 <div className="flex flex-col gap-10 col-span-8 xl:col-span-4 xl:row-span-1">
                     <div className="flex flex-col gap-6">
-                        <div className="text-2xl md:text-[38px] lg:text-[46px] font-big-shoulders font-regular text-white leading-tight">Why both mentors together create magic:</div>
+                        <div className="text-2xl md:text-[38px] lg:text-[46px] xl:text-4xl 2xl:text-[46px] font-big-shoulders font-regular text-white leading-tight">Why both mentors together create magic:</div>
                         <p className="text-accent">Tina brings strategy, clarity, and structure.<br />Malathi brings depth, reflection, and emotional grounding.</p>
                     </div>
                     <PrimaryButton>Reserve My Free Spot</PrimaryButton>
@@ -99,8 +99,8 @@ export default function Mentor() {
 
                 {/* Grid 2 */}
                 <div className="flex flex-col gap-10 col-span-8 row-start-2 xl:col-span-4 xl:col-start-5 xl:row-span-1">
-                    <div className="text-2xl md:text-[38px] lg:text-[46px] font-big-shoulders font-regular text-white">Together, they create a session that is:</div>
-                    <div className="grid grid-flow-col grid-cols-[repeat(2,max-content)] grid-rows-3 sm:grid-cols-[repeat(3,max-content)] sm:grid-rows-2 gap-x-10 gap-y-5 text-white">
+                    <div className="text-2xl md:text-[38px] lg:text-[46px] xl:text-4xl 2xl:text-[46px] font-big-shoulders font-regular text-white">Together, they create a session that is:</div>
+                    <div className="grid grid-flow-col grid-cols-[repeat(2,max-content)] grid-rows-3 sm:grid-cols-[repeat(3,max-content)] sm:grid-rows-2 xl:grid-cols-[repeat(2,max-content)] xl:grid-rows-3 gap-x-10 gap-y-5 text-white">
                         {checkListItems.map((item, index) => (
                             <CheckListItem key={index}>{item}</CheckListItem>
                         ))}
